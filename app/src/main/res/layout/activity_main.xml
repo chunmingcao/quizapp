@@ -1,0 +1,58 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity" >
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+
+    <TextView android:id="@+id/qustiontext" android:text="@string/hello_world" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:textSize="32sp" />
+
+    <ListView android:id="@+id/options" android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+    <ImageButton android:text="Submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:onClick="submitAnswer"
+        android:src="@drawable/submit"
+        android:layout_gravity="right|center"
+        />
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"/>
+    <LinearLayout android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        >
+    <ImageButton
+        android:id="@+id/preQ"
+        android:text="Pre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:src="@drawable/previous"
+        android:onClick="preQuestion"/>
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"/>
+    <ImageButton
+        android:id="@+id/nextQ"
+        android:text="Next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:src="@drawable/next"
+        android:onClick="nextQuestion"/>
+    </LinearLayout>
+</LinearLayout>
+</ScrollView>
